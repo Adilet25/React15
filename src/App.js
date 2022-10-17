@@ -18,6 +18,11 @@ const App = () => {
     setProducts(newProducts);
   }
 
+  function deleteProduct(id) {
+    let newProducts = [...products];
+    newProducts = newProducts.filter(item => item.id !== id);
+    setProducts(newProducts);
+  }
   return (
     <>
       <Header handleShow={handleShow} />
@@ -26,7 +31,7 @@ const App = () => {
         handleClose={handleClose}
         addProduct={addProduct}
       />
-      <ProductList products={products} />
+      <ProductList products={products} deleteProduct={deleteProduct} />
     </>
   );
 };
