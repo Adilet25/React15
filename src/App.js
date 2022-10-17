@@ -12,10 +12,10 @@ const App = () => {
   const [products, setProducts] = useState([]);
 
   function addProduct(newObj) {
-    // let newProducts = [...products];
-    // newProducts.push(newObj);
-    // console.log(newProducts);
-    // setProducts(newProducts);
+    let newProducts = [...products];
+    newProducts.push(newObj);
+    console.log(newProducts);
+    setProducts(newProducts);
   }
 
   return (
